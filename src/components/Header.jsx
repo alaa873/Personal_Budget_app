@@ -18,13 +18,15 @@ const Header = ({ handleShow, handleShowExpenses }) => {
 
     return (
         <div className="d-flex justify-content-center justify-content-md-between align-items-center border-bottom flex-wrap">
-            <Stack className="d-flex justify-content-between align-baseline p-2" direction="horizontal" gap={3}>
-                <div className="d-flex align-items-center">
-                    <h3 className="text-primary"> Total:</h3>
-                    <p className="m-0 fs-5 ms-2 bg-primary p-2 rounded-5 text-white"> {currencyFormater.format(totalExpenses)} / {currencyFormater.format(totalBudget)}</p>
-                </div>
+            {
+                totalBudget !== 0 && <Stack className="d-flex justify-content-between align-baseline p-2" direction="horizontal" gap={3}>
+                    <div className="d-flex align-items-center">
+                        <h3 className="text-primary"> Total:</h3>
+                        <p className="m-0 fs-5 ms-2 bg-primary p-2 rounded-5 text-white"> {currencyFormater.format(totalExpenses)} / {currencyFormater.format(totalBudget)}</p>
+                    </div>
 
-            </Stack>
+                </Stack>
+            }
             <Stack className="d-flex justify-content-center justify-content-md-end align-baseline  p-2" direction="horizontal" gap={3}>
                 <div className="">
                     <Button variant="primary" onClick={handleShow} className="me-2">Add Budget</Button>{' '}
