@@ -1,7 +1,6 @@
 import { Button, Stack } from "react-bootstrap"
 import { useBudgut } from "../context/useContext"
 import { currencyFormater } from "./helper"
-import BudgetCard from "./Card"
 const Header = ({ handleShow, handleShowExpenses }) => {
     const { budget, expenses } = useBudgut()
     const totalExpenses = expenses.map(
@@ -16,10 +15,9 @@ const Header = ({ handleShow, handleShowExpenses }) => {
         return a + b
     }, 0)
 
-    console.log(totalExpenses)
-    console.log(totalBudget)
+
     return (
-        <div className="d-flex justify-content-between align-items-center border-bottom">
+        <div className="d-flex justify-content-center justify-content-md-between align-items-center border-bottom flex-wrap">
             <Stack className="d-flex justify-content-between align-baseline p-2" direction="horizontal" gap={3}>
                 <div className="d-flex align-items-center">
                     <h3 className="text-primary"> Total:</h3>
