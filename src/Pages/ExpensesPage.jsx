@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import AllExpensesTable from '../../components/AllExpensesTable'
-import SideBar from '../../components/SideBar'
-import AddExpenseModal from '../../components/ExpensesModel'
+import AllExpensesTable from '../components/AllExpensesTable'
+import SideBar from '../components/SideBar'
+import AddExpenseModal from '../components/ExpensesModel'
 import { ToastContainer } from 'react-toastify';
 
 const ExpensesPage = () => {

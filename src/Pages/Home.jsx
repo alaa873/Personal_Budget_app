@@ -1,13 +1,13 @@
 
-import BudgetCard from "../../components/Card";
-import Header from "../../components/Header";
+import BudgetCard from "../components/Card";
+import Header from "../components/Header";
 import { Col, Row } from "react-bootstrap";
-import SideBar from "../../components/SideBar";
-import AddExpenseModal from "../../components/ExpensesModel";
-import BudgetModel from "../../components/BudgetModel";
-import DataNull from "../../components/DataNull";
+import SideBar from "../components/SideBar";
+import AddExpenseModal from "../components/ExpensesModel";
+import BudgetModel from "../components/BudgetModel";
+import DataNull from "../components/DataNull";
 import { ToastContainer } from 'react-toastify';
-import HomeHook from "../../Hooks/HomeHook";
+import HomeHook from "../Hooks/HomeHook";
 
 
 const Home = () => {
@@ -60,7 +60,7 @@ const Home = () => {
                                     })}
                                 </div>
                             ) :
-                                <DataNull name="Empty Found   " />
+                                <DataNull name="Empty Budget   " />
 
                         }
                     </div>
